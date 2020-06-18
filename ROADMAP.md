@@ -1,6 +1,5 @@
-# Planned Features
+# List of Features
 
-## Major Features
-
-- [ ]Hello
-- [x] Test
+- [ ] Map Chunk Generation like [https://shapez.io](shapez.io's).
+- [ ] Mining Resource Depth (some resources have more underneath them)
+- [ ] Actually make this thing
