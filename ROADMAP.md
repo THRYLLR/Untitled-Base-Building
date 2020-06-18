@@ -8,6 +8,11 @@
 
 ## Extractors
 
+- Siphon
+- Track Shovel (Shovel that moves back and forth on a track)
+- Drill
+- Unstable Gravity Manipulator (Draws in gravity in order to extract metals, has a small chance of )
+
 ## Processors
 
 - Compressor
@@ -16,6 +21,8 @@
 - Smelter
 - Basic Mold
 - Adaptable Mold
+- Power Plant
+- Refinery
 
 ## Transporters
 
@@ -23,14 +30,18 @@
 - Basic Pipe
 - Advanced Pipe
 - Wire
+- Track
 
 ## Other
 
+- Tank
+- Transport Car
 - Incinerator
 - Basic Storage
 - Advanced Storage
 - Battery
 - Transistor
+- Pump (Needs to be at end of any liquid or gas transport)
 - Binary Register
 
 # List of Planned Resources
