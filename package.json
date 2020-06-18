@@ -3,9 +3,7 @@
   "version": "0.0.1",
   "description": "A yet-to-be-named base building game, similar to and inspired by https://shapez.io.",
   "main": "src/main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/THRYLLR/Untitled-Base-Building.git"
