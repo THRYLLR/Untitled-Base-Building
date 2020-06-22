@@ -2,8 +2,10 @@
   "name": "untitled-base-building",
   "version": "0.0.1",
   "description": "A yet-to-be-named base building game, similar to and inspired by https://shapez.io.",
-  "main": "src/main.js",
-  "scripts": {},
+  "private": true,
+  "scripts": {
+    "gulp": "gulp"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/THRYLLR/Untitled-Base-Building.git"
@@ -13,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/THRYLLR/Untitled-Base-Building/issues"
   },
-  "homepage": "https://github.com/THRYLLR/Untitled-Base-Building#readme"
+  "homepage": "https://github.com/THRYLLR/Untitled-Base-Building#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.7"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }

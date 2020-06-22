@@ -9,20 +9,25 @@
 ## Extractors
 
 - Siphon
-- Track Shovel (Shovel that moves back and forth on a track)
 - Drill
-- Unstable Gravity Manipulator (Draws in gravity in order to extract metals, has a small chance of )
+- Unstable Gravity Manipulator (Draws in gravity in order to extract metals, has a small chance of imploding)
+- Tunneling Machine
+- Bucket Wheel Excavator
+- Pneumatic Liquefier (made up) (Melts metals in order to be able to suck them up a pipe via high-speed air)
 
 ## Processors
 
 - Compressor
 - Furnace
+- Blast Furnace
 - Forge
 - Smelter
 - Basic Mold
 - Adaptable Mold
 - Power Plant
 - Refinery
+- Electrolyzer
+- Sifter (Can be paired with Bucket Wheel Excavator, to separate different metals)
 
 ## Transporters
 
