@@ -4,7 +4,7 @@
   "description": "A yet-to-be-named base building game, similar to and inspired by https://shapez.io.",
   "private": true,
   "scripts": {
-    "gulp": "gulp"
+    "serve:dev": "gulp serve:dev"
   },
   "repository": {
     "type": "git",
