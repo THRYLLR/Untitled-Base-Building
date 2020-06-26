@@ -13,5 +13,19 @@ module.exports = (dev = true) => {
       publicPath: "/",
       library: "umd",
     },
+    module: {
+      rules: [
+        {
+          test: /\.js$/,
+          include: [path.resolve(__dirname, "src", "js")],
+          use: {
+            loader: "babel-loader",
+            options: {
+              configFile: "./.babelrc",
+            },
+          },
+        },
+      ],
+    },
   };
 };
