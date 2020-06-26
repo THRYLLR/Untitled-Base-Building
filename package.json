@@ -4,7 +4,8 @@
   "description": "A yet-to-be-named base building game, similar to and inspired by https://shapez.io.",
   "private": true,
   "scripts": {
-    "serve:dev": "gulp serve:dev"
+    "serve:dev": "gulp serve:dev",
+    "js": "gulp javascript"
   },
   "repository": {
     "type": "git",
@@ -16,10 +17,16 @@
     "url": "https://github.com/THRYLLR/Untitled-Base-Building/issues"
   },
   "homepage": "https://github.com/THRYLLR/Untitled-Base-Building#readme",
-  "dependencies": {
-    "browser-sync": "^2.26.7"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "gulp": "^4.0.2"
-  }
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0-beta.2",
+    "require-dir": "^1.2.0",
+    "webpack": "^4.43.0",
+    "webpack-stream": "^5.2.1"
+  },
+  "//1": "postcss, babel, webpack-stream, gulp-load-plugins, node-sass, gulp-sass"
 }

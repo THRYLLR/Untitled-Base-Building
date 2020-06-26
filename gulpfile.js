@@ -1,5 +1,6 @@
 const gulp = require("gulp");
 const browserSync = require("browser-sync").create();
+require("require-dir")("./build-utils");
 
 gulp.task("default", async () => {
   return console.log("Success!");
