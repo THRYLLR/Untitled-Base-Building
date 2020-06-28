@@ -6,11 +6,10 @@ const path = require("path");
 module.exports = (dev = true) => {
   return {
     mode: dev ? "development" : "production",
-    entry: "../src/js/main.js",
+    entry: path.resolve("src", "js", "main.js"),
     output: {
-      path: path.resolve(__dirname, "build"),
+      path: path.resolve("build"),
       filename: dev ? "bundle.dev.js" : "bundle.js",
-      publicPath: "/",
       library: "umd",
     },
     module: {
@@ -26,6 +25,10 @@ module.exports = (dev = true) => {
           },
         },
       ],
+    },
+    resolve: {
+      modules: [path.resolve("src", "js")],
+      extensions: [".js"],
     },
   };
 };

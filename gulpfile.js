@@ -1,9 +1,15 @@
 const gulp = require("gulp");
 const browserSync = require("browser-sync").create();
+const del = require("del");
+const path = require("path");
 require("require-dir")("./build-utils");
 
-gulp.task("default", async () => {
-  return console.log("Success!");
+gulp.task("clean:dev", async () => {
+  del([path.posix.join("build")]);
+});
+
+gulp.task("build:full:dev", async () => {
+  gulp.series("clean:dev", gulp.parallel("js:full:dev"));
 });
 
 gulp.task("serve:dev", async () => {
@@ -11,10 +17,14 @@ gulp.task("serve:dev", async () => {
     server: "build",
     port: 3005,
     ghostMode: false,
-    logPrefix: "Untitled-Base-Building",
+    logPrefix: "Untitled-Base-Building: Dev",
     online: false,
     reloadOnRestart: true,
     reloadDebounce: 1000,
     notify: false,
   });
+});
+
+gulp.task("default", async () => {
+  gulp.series("build:full:dev", "serve:dev");
 });

@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "serve:dev": "gulp serve:dev",
-    "js": "gulp js:bundle:dev"
+    "build:dev": "gulp build:full:dev"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
     "@babel/preset-env": "^7.10.3",
     "babel-loader": "^8.1.0",
     "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
     "gulp": "^4.0.2",
     "require-dir": "^1.2.0",
     "webpack": "^4.43.0",
