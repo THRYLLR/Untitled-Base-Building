@@ -9,6 +9,4 @@ gulp.task("js:build:dev", async () => {
     .pipe(gulp.dest(path("build")));
 });
 
-gulp.task("js:full:dev", async () => {
-  gulp.series("js:build:dev");
-});
+gulp.task("js:full:dev", gulp.series("js:build:dev"));

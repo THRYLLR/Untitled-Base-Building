@@ -5,12 +5,13 @@ const path = require("path");
 require("require-dir")("./build-utils");
 
 gulp.task("clean:dev", async () => {
-  del([path.posix.join("build")]);
+  await del([path.posix.join("build", "**", "*")]);
 });
 
-gulp.task("build:full:dev", async () => {
-  gulp.series("clean:dev", gulp.parallel("js:full:dev"));
-});
+gulp.task(
+  "build:full:dev",
+  gulp.series("clean:dev", gulp.parallel("js:full:dev"))
+);
 
 gulp.task("serve:dev", async () => {
   browserSync.init({
@@ -25,6 +26,4 @@ gulp.task("serve:dev", async () => {
   });
 });
 
-gulp.task("default", async () => {
-  gulp.series("build:full:dev", "serve:dev");
-});
+gulp.task("default", gulp.series("build:full:dev", "serve:dev"));

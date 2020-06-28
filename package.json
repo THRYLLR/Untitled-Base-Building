@@ -29,5 +29,5 @@
     "webpack": "^4.43.0",
     "webpack-stream": "^5.2.1"
   },
-  "//1": "postcss, babel, webpack-stream, gulp-load-plugins, node-sass, gulp-sass"
+  "//1": "postcss, gulp-load-plugins, node-sass, gulp-sass"
 }
