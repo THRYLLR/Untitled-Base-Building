@@ -1,12 +1,12 @@
 const gulp = require("gulp");
 const webpack = require("webpack-stream");
-const path = require("path").resolve;
+const { resolve } = require("path");
 
 gulp.task("js:build:dev", async () => {
   return gulp
-    .src(path("src", "js", "main.js"))
+    .src(resolve("src", "js", "main.js"))
     .pipe(webpack(require("./webpack.config.js")(true)))
-    .pipe(gulp.dest(path("build")));
+    .pipe(gulp.dest(resolve("build")));
 });
 
 gulp.task("js:full:dev", gulp.series("js:build:dev"));

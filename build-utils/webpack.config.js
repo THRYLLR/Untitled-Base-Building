@@ -20,7 +20,7 @@ module.exports = (dev = true) => {
           use: {
             loader: "babel-loader",
             options: {
-              configFile: "./.babelrc",
+              configFile: path.resolve("build-utils", ".babelrc"),
             },
           },
         },

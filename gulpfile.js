@@ -10,7 +10,7 @@ gulp.task("clean:dev", async () => {
 
 gulp.task(
   "build:full:dev",
-  gulp.series("clean:dev", gulp.parallel("js:full:dev"))
+  gulp.series("clean:dev", "js:full:dev", "css:full:dev", "html:full:dev")
 );
 
 gulp.task("serve:dev", async () => {

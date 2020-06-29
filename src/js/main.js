@@ -1,3 +1,5 @@
-import "./test";
+import { hello } from "./test.js";
 
-console.log(hello);
+window.addEventListener("click", (e) => {
+  console.log(hello, ", menu opened. Event thing: ", e);
+});

@@ -25,6 +25,13 @@
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
+    "gulp-dom": "^1.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-wait": "0.0.2",
+    "node-sass": "^4.14.1",
+    "postcss-preset-env": "^6.7.0",
     "require-dir": "^1.2.0",
     "webpack": "^4.43.0",
     "webpack-stream": "^5.2.1"
