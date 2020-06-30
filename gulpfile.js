@@ -10,7 +10,11 @@ gulp.task("clean:dev", async () => {
 
 gulp.task(
   "build:full:dev",
-  gulp.series("clean:dev", "js:full:dev", "css:full:dev", "html:full:dev")
+  gulp.series(
+    "clean:dev",
+    gulp.parallel("js:full:dev", "css:full:dev"),
+    "html:full:dev"
+  )
 );
 
 gulp.task("serve:dev", async () => {
@@ -24,6 +28,16 @@ gulp.task("serve:dev", async () => {
     reloadDebounce: 1000,
     notify: false,
   });
+
+  gulp.watch("src/css/**/*", gulp.series("css:full:dev"));
+  gulp.watch("src/js/**/*", gulp.series("js:full:dev"));
+  gulp.watch("src/html/**/*", gulp.series("html:full:dev"));
+  gulp.watch("build/**/*", gulp.series("reload:dev"));
+});
+
+gulp.task("reload:dev", async () => {
+  console.log("Files have been changed.");
+  browserSync.reload("*");
 });
 
 gulp.task("default", gulp.series("build:full:dev", "serve:dev"));
