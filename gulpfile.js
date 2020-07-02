@@ -29,8 +29,8 @@ gulp.task("serve:dev", async () => {
     notify: false,
   });
 
-  gulp.watch("src/css/**/*", gulp.series("css:full:dev"));
-  gulp.watch("src/js/**/*", gulp.series("js:full:dev"));
+  gulp.watch("src/css/**/*", gulp.series("css:full:dev", "html:full:dev"));
+  gulp.watch("src/js/**/*", gulp.series("js:full:dev", "html:full:dev"));
   gulp.watch("src/html/**/*", gulp.series("html:full:dev"));
   gulp.watch("build/**/*", gulp.series("reload:dev"));
 });
