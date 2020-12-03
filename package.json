@@ -4,6 +4,7 @@
   "description": "A yet-to-be-named base building game, similar to and inspired by https://shapez.io.",
   "private": true,
   "scripts": {
+    "start": "gulp",
     "serve:dev": "gulp serve:dev",
     "build:dev": "gulp build:full:dev"
   },
@@ -20,6 +21,7 @@
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.10.3",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/preset-env": "^7.10.3",
     "babel-loader": "^8.1.0",
     "browser-sync": "^2.26.7",

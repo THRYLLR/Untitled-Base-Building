@@ -17,7 +17,7 @@ function SRIHash(path) {
 gulp.task("html:prepare:dev", async () => {
   return gulp
     .src(resolve("src", "html", "index.html"))
-    .pipe(require("gulp-wait")(500))
+    .pipe(require("gulp-wait")(3000))
     .pipe(
       dom(function () {
         const document = /** @type {Document} */ (this);
@@ -26,10 +26,10 @@ gulp.task("html:prepare:dev", async () => {
         var script = document.createElement("script");
         script.setAttribute("type", "text/javascript");
         script.setAttribute("src", "/bundle.dev.js");
-        script.setAttribute(
+        /*script.setAttribute(
           "integrity",
           SRIHash(resolve("build", "bundle.dev.js"))
-        );
+        );*/
         document.head.appendChild(script);
 
         //Add CSS
@@ -37,10 +37,10 @@ gulp.task("html:prepare:dev", async () => {
         style.setAttribute("rel", "stylesheet");
         style.setAttribute("type", "text/css");
         style.setAttribute("href", "/main.dev.css");
-        style.setAttribute(
+        /*style.setAttribute(
           "integrity",
           SRIHash(resolve("build", "main.dev.css")) //dev.css
-        );
+        );*/
         document.head.appendChild(style);
 
         return document;

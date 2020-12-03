@@ -1,9 +1,20 @@
-import Renderer from "./renderer";
+import ViewManager from "./view-manager";
+import InputManager from "./input-manager";
+import EventManager from "./event-manager";
+import LoggingManager from "./logging-manager";
+import DataManager from "./data-manager";
+import TimeManager from "./time-manager";
 
-class GameCore {
+export default class GameCore {
   constructor() {
-    this.renderer = new Renderer();
+    this.View = new ViewManager();
+    this.Input = new InputManager();
+    this.Events = new EventManager();
+    this.Logging = new LoggingManager();
+    this.Data = new TimeManager();
   }
-}
 
-export default GameCore;
+  preBoot() {}
+
+  boot() {}
+}

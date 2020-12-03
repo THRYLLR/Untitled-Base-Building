@@ -3,6 +3,7 @@
 - [ ] Map Chunk Generation like [shapez.io's](https://shapez.io).
 - [ ] Mining Resource Depth (some resources have more underneath them)
 - [ ] Actually make this thing
+- [ ] For buildings (later feature): Modules of some kind
 
 # List of Planned Buildings
 

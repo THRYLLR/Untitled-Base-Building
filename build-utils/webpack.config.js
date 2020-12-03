@@ -16,11 +16,12 @@ module.exports = (dev = true) => {
       rules: [
         {
           test: /\.js$/,
-          include: [path.resolve(__dirname, "src", "js")],
+          exclude: /node-modules/,
           use: {
             loader: "babel-loader",
             options: {
-              configFile: path.resolve("build-utils", ".babelrc"),
+              presets: ["@babel/preset-env"],
+              plugins: ["@babel/plugin-proposal-class-properties"],
             },
           },
         },
